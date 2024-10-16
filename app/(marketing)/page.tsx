@@ -1,9 +1,31 @@
+import Link from "next/link";
+import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
 import { Medal } from "lucide-react";
+
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+
+const headingFont = localFont({
+  src: "../../public/fonts/CalSans-SemiBold.woff2",
+  variable: "--font-cal-sans",
+  weight: "100 900",
+});
+
+const textFont = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 const MarketingPage = () => {
   return (
     <div className="flex items-center justify-center flex-col">
-      <div className="flex items-center justify-center flex-col">
+      <div
+        className={cn(
+          "flex items-center justify-center flex-col antialiased",
+          headingFont.variable
+        )}
+      >
         <div className="flex mb-4 items-center border shadow-sm p-4 bg-amber-400 text-amber-700 rounded-full uppercase">
           <Medal className="h-6 w-6 mr-2" />
           No 1 Task Management
@@ -15,11 +37,19 @@ const MarketingPage = () => {
           work forward.
         </div>
       </div>
-      <div className=" text-sm md:text-xl text-neutral-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto">
+      <div
+        className={cn(
+          "text-sm md:text-xl text-neutral-400 mt-4 max-w-xs md:max-w-2xl text-center mx-auto antialiased",
+          textFont.className
+        )}
+      >
         Collaborate, manage projects, and reach new productivity peaks. From
         high rises to the home office, the way your team works is unique -
         accomplish it all with Taskify.
       </div>
+      <Button className={"mt-6"} size={"lg"} asChild>
+        <Link href="/sign-up">Get Taskify for free</Link>
+      </Button>
     </div>
   );
 };
