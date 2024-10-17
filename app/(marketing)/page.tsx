@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 
 const headingFont = localFont({
   src: "../../public/fonts/CalSans-SemiBold.woff2",
-  variable: "--font-cal-sans",
   weight: "100 900",
 });
 
@@ -23,7 +22,7 @@ const MarketingPage = () => {
       <div
         className={cn(
           "flex items-center justify-center flex-col antialiased",
-          headingFont.variable
+          headingFont.className
         )}
       >
         <div className="flex mb-4 items-center border shadow-sm p-4 bg-amber-400 text-amber-700 rounded-full uppercase">

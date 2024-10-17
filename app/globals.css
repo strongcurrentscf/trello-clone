@@ -9,7 +9,18 @@ body,
 }
 
 body {
-  font-family: var(--font-cal-sans), sans-serif;
+  /* font-family: var(--font-cal-sans), sans-serif; */
+  /* font-family: var(--font-poppins); */
+}
+
+/* ALTERNATIVE TO APPLYING ON INDIVIDUAL PAGES OR COMPONENTS */
+/* Utility classes for the custom fonts */
+.heading-font {
+  /* font-family: var(--font-cal-sans), sans-serif; */
+}
+
+.text-font {
+  /* font-family: var(--font-poppins), sans-serif; */
 }
 
 @layer utilities {
