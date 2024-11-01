@@ -21,7 +21,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   let board;
 
   try {
-    throw new Error("simulating error in db not validation");
+    // throw new Error("simulating error in db not validation");
     board = await db.board.create({
       data: {
         title,
