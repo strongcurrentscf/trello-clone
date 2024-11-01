@@ -21,6 +21,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   let board;
 
   try {
+    throw new Error("simulating error in db not validation");
     board = await db.board.create({
       data: {
         title,
@@ -36,6 +37,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 
 export const createBoard = createSafeAction(CreateBoard, handler);
 
+// REVIEW: Primative Server Actions
 // import { z } from "zod";
 // import { revalidatePath } from "next/cache";
 
