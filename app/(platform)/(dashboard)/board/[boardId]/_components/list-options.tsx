@@ -10,6 +10,8 @@ import {
   PopoverClose,
 } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
+import { FormSubmit } from "@/components/form/form-submit";
+import { Separator } from "@/components/ui/separator";
 
 interface ListOptionsProps {
   data: List;
@@ -43,6 +45,27 @@ export const ListOptions = ({ data, onAddCard }: ListOptionsProps) => {
         >
           Add card...
         </Button>
+        <form action="">
+          <input hidden name="id" id="id" value={data.id} />
+          <input hidden name="boardId" id="boardId" value={data.boardId} />
+          <FormSubmit
+            className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
+            variant={"ghost"}
+          >
+            Copy list...
+          </FormSubmit>
+        </form>
+        <Separator />
+        <form action="">
+          <input hidden name="id" id="id" value={data.id} />
+          <input hidden name="boardId" id="boardId" value={data.boardId} />
+          <FormSubmit
+            className="rounded-none w-full h-auto p-2 px-5 justify-start font-normal text-sm"
+            variant={"ghost"}
+          >
+            Delete this list
+          </FormSubmit>
+        </form>
       </PopoverContent>
     </Popover>
   );
