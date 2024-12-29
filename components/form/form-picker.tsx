@@ -14,7 +14,7 @@ import { FormErrors } from "./form-errors";
 
 interface FormPickerProps {
   id: string;
-  errors: Record<string, string[] | undefined>;
+  errors?: Record<string, string[] | undefined>;
 }
 
 export const FormPicker = ({ id, errors }: FormPickerProps) => {
