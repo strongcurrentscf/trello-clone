@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button";
 import { deleteCard } from "@/actions/delete-card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useCardModal } from "@/hooks/use-card-modal";
-import { error } from "console";
 
 interface ActionsProps {
   data: CardWithList;
